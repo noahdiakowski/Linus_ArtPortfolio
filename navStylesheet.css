@@ -1,0 +1,233 @@
+*{
+    font-size: 1.15rem;
+    margin: 0;
+    padding: 0;
+}
+
+#navFlex{
+    display: flex;
+    background-color: #243042;
+    gap: 4rem;
+
+    height: 100%;
+    width: 100%;
+}
+
+
+#logoFlex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    height: 100%;
+    width: 100%;
+    gap: 0.25rem;
+    padding: 0.75rem;
+}
+
+#picWrapper{
+    width: 8%;
+}
+
+#profilePic{
+    height: 100%;
+    width: 100%;
+    border-radius: 5rem;
+}
+
+#navigation{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 70%;
+    gap: 10%;
+}
+
+#menuToggle, #closeToggle{
+    display: none;
+}
+
+.navtext, .full-text, .short-text{
+    color: #AFCCEE;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-family: "Libre Baskerville", serif;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; 
+}
+
+.navtext:visited, .full-text:visited {
+    color: #AFCCEE; 
+}
+
+.navtext.active, .full-text.active {
+  text-decoration: underline solid;
+  text-underline-offset: 0.35rem;
+  font-weight: bold;
+}
+
+.navtext:hover, .full-text:hover {
+    text-decoration: underline;
+    text-decoration-style:dashed;
+    text-underline-offset: 0.35rem;
+    color: #f7b292;
+    cursor: url('/img/OTHERcursor.png') 0 32, auto;
+
+    
+    animation: pulse 1s ease-in-out infinite;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1); 
+  }
+  50% { 
+    transform: scale(1.1); 
+  }
+  100% {
+    transform: scale(1); 
+  }
+}
+
+.short-text, .half-text {
+  display: none;
+}
+
+body{
+    background-color: #BDC7D2;
+}
+
+body.menu-open {
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 620px) {
+
+    #logoFlex{
+        flex-direction: row;
+        gap: 32%;
+    }
+
+    #navigation {
+        display: none;
+    }
+
+    #picWrapper{
+        width: 22%;
+        padding-right: 1%;
+        justify-self: center;
+    }
+
+    .navtext, .navtext:visited, .short-text, .short-text:visited{
+        text-shadow: none;
+        color: #243042;
+        font-weight: bolder;
+        transition: color 0.3s ease;
+        font-size: 1.5rem;
+        opacity: 0;
+    }
+
+    #menuToggle, #closeToggle {
+        font-size: 2rem;
+        background: none;
+        border: none;
+        color: #FFFD82;
+        z-index: 1001;
+    }
+
+    #menuToggle {
+        display: inline-block;
+    }
+
+    #navFlex.menu-open #logoFlex{
+        display: flex;
+        align-items: center; 
+        width: 100%;
+        gap: 0;
+        align-items: stretch;
+        padding: 0;
+    }
+
+    #navFlex.menu-open {
+        width: 100vw;
+        height: 100vh;
+        background-color: #AFCCEE;
+    }
+
+    #navFlex.menu-open #navigation {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 5%; 
+        gap: 8%;
+        height: 100%;
+    }
+
+    #navFlex.menu-open #menuToggle,
+    #navFlex.menu-open #picWrapper {
+        display: none;
+    }
+
+    #navFlex.menu-open #closeToggle {
+        display: inline-block;
+        color: #243042;
+        align-self: flex-start;
+        height: fit-content;
+        padding-top: 6%;
+        padding-left: 4%;
+    }
+
+    #navFlex.menu-open .navtext:hover,.short-text:hover{
+        font-size: 1.7rem;
+        animation: none;
+        text-decoration: underline dashed #243042;
+        text-underline-offset: 0.4rem;
+        opacity: 1;
+    }
+
+    .short-text {
+        display: inline;
+    }
+
+    .full-text {
+        display: none;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    #navFlex.menu-open .navtext,
+    #navFlex.menu-open .short-text {
+        animation: fadeIn 0.6s ease forwards;
+    }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 620px){
+
+    #navigation{
+        text-align: center;
+        margin: 0 2rem;
+        width: 100%;
+        gap: 7%;
+    }
+
+    #picWrapper{
+        width: 12%;
+    }
+
+    .short-text, .navtext{
+        display: inline-block;
+        font-size: 1.05rem;
+    }
+
+    .full-text{
+        display: none;
+    }
+}

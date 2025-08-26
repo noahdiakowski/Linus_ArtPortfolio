@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "illustration.css">
+    <link rel = "stylesheet" href = "navStylesheet.css">
+    <link rel = "stylesheet" href = "footer.css">
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "illustration.css">
+    <link rel = "stylesheet" href = "navStylesheet.css">
+    <link rel = "stylesheet" href = "footer.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400..700;1,400..700&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <title>Portfolio of Bee</title>
+</head>
+
+<body>
+    
+    <div id ="navbar"></div>
+    <script>
+        fetch('nav.html')
+            .then(response => response.text())
+            .then(data => {document.getElementById('navbar').innerHTML = data;
+
+            const navLinks = document.querySelectorAll(".navtext");
+            const currentPage = window.location.pathname.split("/").pop(); 
+
+            navLinks.forEach(link => {
+                const linkPage = link.getAttribute("href");
+
+                if (linkPage === currentPage) {
+                    link.classList.add("active");
+                }
+        });
+    });
+    </script>
+
+
+    <main class = "gallerywrap">
+        <div id = "gridbox">
+            <div class="artWrapper">
+                <img class="art" src="art1/bitchmovepage1-sdjmgj.jpeg">
+            </div>
+            <div class="artWrapper">
+                <img class="art" src="art1/bitchmovepage2-sdjmgq.jpeg">
+            </div>
+            <div class="artWrapper">
+                <img class="art" src="art1/comiccommissioninfo-sdjmd0.png">
+            </div>
+        </div>
+    </main>
+
+    <div id = "footer"></div>
+     <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {document.getElementById('footer').innerHTML = data;});
+    </script>
+
+</body>
+</html>
