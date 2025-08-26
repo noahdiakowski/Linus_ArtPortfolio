@@ -5,7 +5,7 @@
 
 #gridbox {
     column-count: 3; 
-    column-gap: 0.2rem;
+    column-gap: 0.5rem;
     margin: 0 5rem;
     padding: 2.5rem 0;
     width: fit-content;
@@ -17,11 +17,13 @@
 .artWrapper {
     width: 90%;
     padding: 0.75rem 0;
+    
 }
 
 .art {
     width: 100%;
     height: auto;
+    border: 0.5rem solid #8295aaa2;
 }
 
 @media only screen and (max-width: 621px){
