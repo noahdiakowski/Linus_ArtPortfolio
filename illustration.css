@@ -23,13 +23,20 @@
 .art {
     width: 100%;
     height: auto;
-    border: 0.5rem solid #8295aaa2;
+    border: 0.5rem solid #9aa8b8ba;
+    border-radius: 0.5rem;
+}
+
+.art:hover{
+    border: 0.5rem solid #f7b292;
+
 }
 
 @media only screen and (max-width: 621px){
 
     .gallery-wrapper{
         flex-wrap: wrap;
+        overflow: hidden;
     }
 
     #gridbox{
@@ -42,8 +49,18 @@
     }
 
     .artWrapper{
-        width: 95%;
+        width: 93%;
         padding: 1.75rem 0;
+        padding-right: 0.2rem;
+    }
+
+    .art{
+        border: 0.3rem solid #9aa8b8ba;
+        width: 100%;
+    }
+
+    .art:hover{
+        border: 0.3rem solid #f7b292;
     }
 }
     

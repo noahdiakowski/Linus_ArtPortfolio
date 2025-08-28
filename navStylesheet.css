@@ -73,20 +73,6 @@
     text-underline-offset: 0.35rem;
     color: #f7b292;
     cursor: url('/img/OTHERcursor.png') 0 32, auto;
-
-    
-    animation: pulse 1s ease-in-out infinite;
-}
-@keyframes pulse {
-  0% {
-    transform: scale(1); 
-  }
-  50% { 
-    transform: scale(1.1); 
-  }
-  100% {
-    transform: scale(1); 
-  }
 }
 
 .short-text, .half-text {
@@ -94,7 +80,7 @@
 }
 
 body{
-    background-color: #BDC7D2;
+    background-color: #121b29;
 }
 
 body.menu-open {
@@ -106,6 +92,7 @@ body.menu-open {
     #logoFlex{
         flex-direction: row;
         gap: 32%;
+        overflow: hidden;
     }
 
     #navigation {
@@ -120,7 +107,7 @@ body.menu-open {
 
     .navtext, .navtext:visited, .short-text, .short-text:visited{
         text-shadow: none;
-        color: #243042;
+        color: #AFCCEE;
         font-weight: bolder;
         transition: color 0.3s ease;
         font-size: 1.5rem;
@@ -151,7 +138,7 @@ body.menu-open {
     #navFlex.menu-open {
         width: 100vw;
         height: 100vh;
-        background-color: #AFCCEE;
+        background-color: #121b29;
     }
 
     #navFlex.menu-open #navigation {
@@ -170,7 +157,7 @@ body.menu-open {
 
     #navFlex.menu-open #closeToggle {
         display: inline-block;
-        color: #243042;
+        color: #FFFD82;
         align-self: flex-start;
         height: fit-content;
         padding-top: 6%;
@@ -180,7 +167,7 @@ body.menu-open {
     #navFlex.menu-open .navtext:hover,.short-text:hover{
         font-size: 1.7rem;
         animation: none;
-        text-decoration: underline dashed #243042;
+        text-decoration: underline dashed #AFCCEE;
         text-underline-offset: 0.4rem;
         opacity: 1;
     }

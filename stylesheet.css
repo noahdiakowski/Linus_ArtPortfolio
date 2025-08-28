@@ -16,3 +16,7 @@ body{
     height: fit-content;
     width: 50%;
 }
+
+#intro p, h1{
+    text-shadow: none;
+}
