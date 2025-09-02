@@ -6,7 +6,7 @@
 
 #navFlex{
     display: flex;
-    background-color: #243042;
+    background-color: #243247;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.449);
     gap: 4rem;
 
@@ -71,7 +71,7 @@
     text-decoration: underline;
     text-decoration-style:dashed;
     text-underline-offset: 0.35rem;
-    color: #f7b292;
+    color: #afd395;
     cursor: url('/img/OTHERcursor.png') 0 32, auto;
 }
 

@@ -28,7 +28,7 @@
 }
 
 .art:hover{
-    border: 0.5rem solid #f7b292;
+    border: 0.5rem solid #FFFD82;
 
 }
 
@@ -60,7 +60,7 @@
     }
 
     .art:hover{
-        border: 0.3rem solid #f7b292;
+        border: 0.3rem solid #afd395;
     }
 }
     
