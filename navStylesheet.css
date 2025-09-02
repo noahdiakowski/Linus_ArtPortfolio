@@ -135,6 +135,10 @@ body.menu-open {
         padding: 0;
     }
 
+    body.modalOpen #menuToggle {
+        display: none;   
+    }
+    
     #navFlex.menu-open {
         width: 100vw;
         height: 100vh;

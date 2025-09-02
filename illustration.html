@@ -18,39 +18,92 @@
     <script src="/js/sciptNav.js"></script>
 
 
+    <main id = "gallerywrap"><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "testlightbox.css">
+    <link rel = "stylesheet" href = "navStylesheet.css">
+    <link rel = "stylesheet" href = "footer.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400..700;1,400..700&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <title>Portfolio of Bee</title>
+    <link rel="icon" type="image/x-icon" href="/img/favoricon.jpg">
+</head>
+
+<body>
+    
+    <div id ="navbar"></div>
+    <script src="/js/sciptNav.js"></script>
+    
+
+
     <main id = "gallerywrap">
         <div id = "gridbox">
             <div class="artWrapper">
-                <img class="art" src="art/thelittlegirl2-sttosw.png">
+                <img class="art" src="art/funger2.png" onclick="openModal();currentSlide(1)">
             </div>
             <div class="artWrapper">
-                <img class="art" src="art/Screenshot20240403at10-sbcxyx.23.16.png">
+                <img class="art" src="art/window.png" onclick="openModal();currentSlide(2)">
             </div>
             <div class="artWrapper">
-                <img class="art" src="art/Limelookingmightymad-sdjmn2.JPG">
+                <img class="art" src="art/madLime.JPG" onclick="openModal();currentSlide(3)">
             </div>
             <div class="artWrapper">
-                <img class="art" src="art/Frolickingwitches-sbcxwx.jpg">
+                <img class="art" src="art/frogWitches.jpg" onclick="openModal();currentSlide(4)">
             </div>
             <div class="artWrapper">
-                <img class="art" src="art/Britadrawing-sbcxwo.jpg">
+                <img class="art" src="art/brita.jpg" onclick="openModal();currentSlide(5)">
             </div>
             <div class="artWrapper">
-                <img class="art" src="art/Howsthewater-sdjmrz.jpeg">
+                <img class="art" src="art/comicWeather.jpeg" onclick="openModal();currentSlide(6)">
             </div>    
             <div class="artWrapper">
-                <img class="art" src="art/evi butterfly illustration DONE! 2-s5twg1.png">
+                <img class="art" src="art/eviButterfly.png" onclick="openModal();currentSlide(7)">
             </div>    
             <div class="artWrapper">
-                <img class="art" src="art/Limeninjaaaa-sbcxmh.jpg">
+                <img class="art" src="art/ninjaLime.jpg" onclick="openModal();currentSlide(8)">
             </div>    
             <div class="artWrapper">
-                <img class="art" src="art/thelittlegirl1-sttos1.png">
+                <img class="art" src="art/funger.png" onclick="openModal();currentSlide(9)">
             </div>    
         </div>
     </main>
+    
+    <div id="modal" class="modal">
+         <span class="close" onclick="closeModal()">&times;</span>
+         <!--The content you see once you open modal - including images, arrows, closetab-->
+         <div class = "modal-content"> 
+             <div class="slide-container">
+                 <a class="previous" onclick="plusSlides(-1)">&#10094;</a>
+                 <figure class = "slides">
+                     <img src= "/art/brita.jpg" alt="Brita">
+                     <figcaption class="caption">Drawing of Brita's Family</figcaption>
+                 </figure>
+                 <figure class = "slides">
+                     <img src= "/art/eviButterfly.png" alt="Evi with butterfly">
+                     <figcaption class="caption">OC Evi with a Butterfly</figcaption>
+                 </figure>
+                 <figure class = "slides">
+                     <img src= "/art/frogWitches.jpg" alt = "Witches Dancing">
+                     <figcaption class="caption">Witches Dancing</figcaption>
+                 </figure>
+                 <figure class = "slides">
+                     <img src= "/art/funger.png" alt="Funger 1">
+                     <figcaption class="caption">Funger 1</figcaption>
+                 </figure>
+                 <figure class = "slides">
+                     <img src= "/art/funger2.png" alt="Funger 2">
+                     <figcaption class="caption">Funger 2</figcaption>
+                 </figure>
+                 <a class="next" onclick="plusSlides(1)">&#10095;</a>
+             </div>
+         </div>
+     </div>
 
     <div id = "footer"></div>
-    <script src = "/js/scriptFoot.js"></script>
+    <script src="/js/scriptFoot.js"></script>
+    <script src = "lightbox.js"></script>
 </body>
 </html>
